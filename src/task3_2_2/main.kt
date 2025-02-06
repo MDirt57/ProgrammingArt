@@ -1,8 +1,8 @@
-package task3_2_2.transport
+package task3_2_2
 
-import task3_2_2.transport.factories.HyundaiFactory
-import task3_2_2.transport.factories.SkodaFactory
-import task3_2_2.transport.factories.VolvoFactory
+import task3_2_2.factories.HyundaiFactory
+import task3_2_2.factories.SkodaFactory
+import task3_2_2.factories.VolvoFactory
 
 
 fun main(){

@@ -1,4 +1,4 @@
-package task3_2_2.transport.factories
+package task3_2_2.factories
 
 import task3_2_2.transport.bus.Bus
 import task3_2_2.transport.bus.HyundaiBus
