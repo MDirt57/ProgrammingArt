@@ -1,6 +1,6 @@
 package task5_3_2
 
-class Car {
+class Car: Cloneable {
 
     class Builder{
 
@@ -44,7 +44,7 @@ class Car {
         return "${this.hashCode()}-Car\n$body$wheel$engine\n"
     }
 
-    fun copy(): Car{
+    override fun copy(): Car{
         return Car(this.body.copy(), this.wheel.copy(), this.engine.copy())
     }
 

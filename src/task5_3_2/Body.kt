@@ -2,7 +2,7 @@ package task5_3_2
 
 
 
-class Body {
+class Body: Cloneable {
 
     enum class BodyType{
         SEDAN,
@@ -55,7 +55,7 @@ class Body {
         return "${this.hashCode()}-Body - type: $type; color: $color\n"
     }
 
-    fun copy(): Body{
+    override fun copy(): Body{
         return Body(this.type, this.color)
     }
 

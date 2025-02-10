@@ -1,7 +1,7 @@
 package task5_3_2
 
 
-class Wheel {
+class Wheel: Cloneable {
 
     enum class Shape{
         CIRCLE,
@@ -50,7 +50,7 @@ class Wheel {
         return "${this.hashCode()}-Wheel - shape: $shape; tire: $tire\n"
     }
 
-    fun copy(): Wheel{
+    override fun copy(): Wheel{
         return Wheel(this.shape, this.tire)
     }
 

@@ -1,9 +1,7 @@
 package task5_3_2
 
 
-
-
-class Engine {
+class Engine: Cloneable {
 
     enum class EngineType {
         DIESEL,
@@ -37,7 +35,7 @@ class Engine {
         return "${this.hashCode()}-Engine - type: $engineType\n"
     }
 
-    fun copy(): Engine{
+    override fun copy(): Engine{
         return Engine(this.engineType)
     }
 
