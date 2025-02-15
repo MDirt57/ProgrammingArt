@@ -3,20 +3,15 @@ package task2_3_2.equations
 import kotlin.math.sqrt
 
 class BiQuadraticEquation(
-    val a: Double,
+    a: Double,
     b: Double,
     c: Double
-) : Equation(b, c) {
-
-    override fun checkParameters() {
-        if (a == 0.0 && b == 0.0 && c == 0.0){
-            throw IllegalArgumentException("Infinity solutions")
-        }
-    }
+) : QuadraticEquation(a, b, c) {
 
     // ax^4 + bx^2 + c = 0
     override fun solve(): List<Double> {
         checkParameters()
+        //quadratic roots
         if (a == 0.0 && b == 0.0) {
             return listOf()
         }
