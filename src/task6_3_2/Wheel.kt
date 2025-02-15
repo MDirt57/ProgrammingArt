@@ -1,4 +1,4 @@
-package task5_3_2
+package task6_3_2
 
 
 class Wheel: Cloneable {

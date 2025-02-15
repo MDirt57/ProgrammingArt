@@ -1,8 +1,8 @@
-package task5_3_2
+package task6_3_2
 
 
 
-class Director {
+object Director {
 
     fun makeRandomCar1(): Car{
         val body = Body.Builder()

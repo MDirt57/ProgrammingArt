@@ -1,11 +1,9 @@
-package task5_3_2
+package task6_3_2
 
 
 fun main(){
 
-    val director = Director()
-
-    val car1 = director.makeRandomCar1()
+    val car1 = Director.makeRandomCar1()
     print(car1)
 
     //1389133897-Car
