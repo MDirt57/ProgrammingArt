@@ -26,15 +26,8 @@ class Body {
         private var type: BodyType = BodyType.SEDAN
         private var color: Color = Color.BLACK
 
-        fun setType(type: BodyType): Builder{
-            this.type = type
-            return this
-        }
-
-        fun setColor(color: Color): Builder{
-            this.color = color
-            return this
-        }
+        fun setType(type: BodyType) = apply { this.type = type }
+        fun setColor(color: Color) = apply { this.color = color }
 
         fun build(): Body{
             return Body(type, color)
