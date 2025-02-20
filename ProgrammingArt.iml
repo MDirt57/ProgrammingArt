@@ -11,5 +11,7 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="KotlinJavaRuntime" level="project" />
+    <orderEntry type="library" name="MicroUsb" level="project" />
+    <orderEntry type="library" name="VehicleCalculatorLib" level="project" />
   </component>
 </module>
