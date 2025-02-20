@@ -37,7 +37,7 @@ public class Main {
         TypeCCharger adapterMicroUsbToTypeC = new AdapterMicroUsbToTypeC(charger);  // адаптер через агрегацію
 //        TypeCCharger adapterMicroUsbToTypeC = new AdapterMicroUsbToTypeCInheritance(5.0f, 1.0f);  // адаптер через наслідування
 //        samsung.pluginCharger(adapterMicroUsbToTypeC);
-        samsung.charge(10);
+        samsung.charge(20);
         samsung.unplugCharger();
         printBatteryStatus(samsung);
 
@@ -45,7 +45,7 @@ public class Main {
 //        TODO: implement and use adapter Type-C => USB
         System.out.println("Maintaining legacy charging");
         phone.pluginCharger(new AdapterTypeCToMicroUsb(fastCharge));
-        phone.charge(20);
+        phone.charge(10);
         System.out.printf("Current power status = %s%n", phone.getChargingPercent());
 
     }

@@ -15,9 +15,13 @@ public class Main {
         System.out.println(calculator.calculatePrice());
 
         Auto auto = new Auto(10, "Ford", true, 100_000);
+        Auto auto1 = new Auto(0, "Tesla", false, 0);
         UkrainianCustoms customs = new UkrainianCustoms(calculator);
         System.out.println(customs.vehiclePrice(auto));
         System.out.println(customs.tax(auto));
+
+        System.out.println(customs.vehiclePrice(auto1));
+        System.out.println(customs.tax(auto1));
 
     }
 

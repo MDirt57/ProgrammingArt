@@ -16,17 +16,19 @@ public class UkrainianCustoms implements Customs {
 
     @Override
     public float vehiclePrice(Auto auto) {
-        String priceStr = calculator.calculatePrice(); // Отримуємо рядок "330USD"
-        String numericPart = priceStr.replaceAll("[^0-9.]", ""); // Видаляємо всі нечислові символи
-        float price = Float.parseFloat(numericPart); // Перетворюємо в число
+        calculator.setVehicle(new AdapterAutoToVehicle(auto));
+        String priceStr = calculator.calculatePrice();
+        String numericPart = priceStr.replaceAll("[^0-9.]", "");
+        float price = Float.parseFloat(numericPart);
         return price * usdToUah;
     }
 
     @Override
     public float tax(Auto auto) {
-        String priceStr = calculator.calculatePrice(); // Отримуємо рядок "330USD"
-        String numericPart = priceStr.replaceAll("[^0-9.]", ""); // Видаляємо всі нечислові символи
-        float price = Float.parseFloat(numericPart); // Перетворюємо в число
+        calculator.setVehicle(new AdapterAutoToVehicle(auto));
+        String priceStr = calculator.calculatePrice();
+        String numericPart = priceStr.replaceAll("[^0-9.]", "");
+        float price = Float.parseFloat(numericPart);
         return price * taxCoefficient;
     }
 }
