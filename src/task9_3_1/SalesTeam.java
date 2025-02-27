@@ -1,34 +1,27 @@
 package task9_3_1;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class SalesTeam implements Worker {
 
-    private final List<Manager> managers;
-    private final List<Salesperson> salespeople;
+    private final List<Worker> workers = new ArrayList<>();
 
-    public SalesTeam(List<Manager> managers, List<Salesperson> salespeople){
-        this.managers = managers;
-        this.salespeople = salespeople;
+    public SalesTeam(Worker... args){
+        workers.addAll(Arrays.asList(args));
     }
 
-//    void addManager(Manager manager) {
-//        managers.add(manager);
-//    }
-//
-//    void addSalesperson(Salesperson salesperson) {
-//        salespeople.add(salesperson);
-//    }
+    public void addWorker(Worker worker){
+        workers.add(worker);
+    }
 
-    public void payExpenses() {
-        for (Manager manager : managers) {
-            manager.payExpenses();
-        }
+    public void removeWorker(Worker worker){
+        workers.remove(worker);
+    }
 
-        for (Salesperson salesperson : salespeople) {
-            salesperson.payExpenses();
-        }
+    public int payExpenses() {
+        return workers.stream().mapToInt(Worker::payExpenses).sum();
     }
 
 }

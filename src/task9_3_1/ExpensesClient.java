@@ -8,34 +8,24 @@ public class ExpensesClient {
     Salesperson sue = new Salesperson("Sue", 200, jane);
     Salesperson johnny = new Salesperson("Cage", 2000000, jane);
 
-    Director lumpa = new Director("Sir David Lumpa", 1);
+    Manager meatSectorManager = new Manager("John Wick", 100000);
+    meatSectorManager.addWorker(jane);
+    meatSectorManager.addWorker(bob);
+    meatSectorManager.addWorker(sue);
+    meatSectorManager.addWorker(johnny);
 
-    SalesTeam meatSector = new SalesTeamBuilder()
-            .addManager(jane)
-            .addSalesPerson(bob)
-            .addSalesPerson(sue)
-            .addSalesPerson(johnny)
-            .build();
+    Manager milkSectorManager = new Manager("Homelander", 100);
+    milkSectorManager.addWorker(jane);
+    milkSectorManager.addWorker(bob);
+    milkSectorManager.addWorker(sue);
+    milkSectorManager.addWorker(johnny);
 
-    SalesTeam milkSector = new SalesTeamBuilder()
-            .addManager(jane)
-            .addSalesPerson(bob)
-            .addSalesPerson(sue)
-            .addSalesPerson(johnny)
-            .build();
+    Manager generalManager = new Manager("David", 50);
+    generalManager.addWorker(meatSectorManager);
+    generalManager.addWorker(milkSectorManager);
 
-    SalesTeam sweetSector = new SalesTeamBuilder()
-            .addManager(jane)
-            .addSalesPerson(bob)
-            .addSalesPerson(sue)
-            .addSalesPerson(johnny)
-            .build();
+    System.out.println("All salary: " + generalManager.payExpenses() + "$");
 
-    lumpa.addSalesTeam(meatSector);
-    lumpa.addSalesTeam(milkSector);
-    lumpa.addSalesTeam(sweetSector);
-
-    lumpa.payExpenses();
   }
 
   private static void payManager(Manager manager) {

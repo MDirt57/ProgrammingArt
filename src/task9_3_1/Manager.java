@@ -1,6 +1,6 @@
 package task9_3_1;
 
-public class Manager implements Worker {
+public class Manager extends SalesTeam {
 
     private final String name;
     private final int salary;
@@ -10,8 +10,8 @@ public class Manager implements Worker {
         this.salary = salary;
     }
 
-    public void payExpenses() {
-        System.out.println(name + " has been paid $" + salary);
+    public int payExpenses() {
+        return super.payExpenses() + salary;
     }
 
 }

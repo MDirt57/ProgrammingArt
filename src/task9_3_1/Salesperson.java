@@ -13,8 +13,8 @@ public class Salesperson implements Worker {
     this.manager = manager;
   }
 
-  public void payExpenses() {
-    System.out.println(name + " has been paid $" + salary);
+  public int payExpenses() {
+    return salary;
   }
 
 }
