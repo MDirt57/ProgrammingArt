@@ -1,6 +1,6 @@
 package task10_3_2.addons;
 
-import task10_3_2.Beverage;
+import task10_3_2.beverage.Beverage;
 
 public class Milk extends Addon{
 

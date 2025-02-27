@@ -1,4 +1,4 @@
-package task10_3_2;
+package task10_3_2.beverage;
 
 public class Decaf extends Beverage {
     @Override

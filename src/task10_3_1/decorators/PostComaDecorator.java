@@ -1,8 +1,6 @@
 package task10_3_1.decorators;
 
-import task10_3_1.Printable;
-
-public class PostComaDecorator extends PostDecorator{
+public class PostComaDecorator extends BaseDecorator {
 
     public PostComaDecorator(Printable string) {
         super(string);

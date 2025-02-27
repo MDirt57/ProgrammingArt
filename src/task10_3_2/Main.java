@@ -4,6 +4,10 @@ import task10_3_2.addons.Cream;
 import task10_3_2.addons.Milk;
 import task10_3_2.addons.MilkCream;
 import task10_3_2.addons.Sugar;
+import task10_3_2.beverage.Beverage;
+import task10_3_2.beverage.DarkRoast;
+import task10_3_2.beverage.Decaf;
+import task10_3_2.beverage.Espresso;
 
 public class Main {
 

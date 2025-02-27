@@ -1,4 +1,4 @@
-package task10_3_1;
+package task10_3_1.decorators;
 
 public interface Printable {
 

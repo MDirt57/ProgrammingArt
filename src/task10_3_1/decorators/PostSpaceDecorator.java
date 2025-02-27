@@ -1,8 +1,6 @@
 package task10_3_1.decorators;
 
-import task10_3_1.Printable;
-
-public class PostSpaceDecorator extends PostDecorator{
+public class PostSpaceDecorator extends BaseDecorator {
 
     public PostSpaceDecorator(Printable string) {
         super(string);

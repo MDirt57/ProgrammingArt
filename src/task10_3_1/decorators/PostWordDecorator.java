@@ -1,8 +1,6 @@
 package task10_3_1.decorators;
 
-import task10_3_1.Printable;
-
-public class PostWordDecorator extends PostDecorator{
+public class PostWordDecorator extends BaseDecorator {
 
     final private String word;
 
