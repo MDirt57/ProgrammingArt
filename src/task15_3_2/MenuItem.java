@@ -7,7 +7,7 @@ public class MenuItem extends Clickable{
         super(command);
     }
 
-    public void select() {
-        command.execute();
+    public void select(Document document) {
+        command.execute(document);
     }
 }

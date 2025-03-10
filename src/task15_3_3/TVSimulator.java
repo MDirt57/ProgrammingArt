@@ -4,8 +4,11 @@ public class TVSimulator {
     public static void main(String[] args) {
 
         Device tv = new Television();
+        Device radio = new Radio();
 
-        RemoteController controller = new RemoteController();
+        RemoteController controller = new RemoteController(tv);
+        RemoteController radioController = new RemoteController(radio);
+        RemoteController allController = new RemoteController(tv, radio);
 
         controller.deviceOn();
 
@@ -21,7 +24,13 @@ public class TVSimulator {
 
         controller.deviceVolumeDown();
 
-        controller.deviceOff();
+//        controller.deviceOff();
+
+        radioController.deviceOn();
+        radioController.deviceVolumeUp();
+        radioController.deviceVolumeUp();
+
+        allController.deviceOff();
 
     }
 }

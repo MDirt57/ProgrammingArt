@@ -1,12 +1,12 @@
 package task15_3_3;
 
-public class Television implements Device {
+public class Radio implements Device {
 
     private int volume;
     private int chanel;
     private boolean isOn;
 
-    public Television() {
+    public Radio() {
         this.isOn = false;
         this.volume = 50;
         this.chanel = 1;
@@ -17,7 +17,7 @@ public class Television implements Device {
         if (isOn) {
             return;
         }
-        System.out.println("Television is on");
+        System.out.println("Radio is on");
         isOn = true;
     }
 
@@ -26,7 +26,7 @@ public class Television implements Device {
         if (!isOn) {
             return;
         }
-        System.out.println("Television is off");
+        System.out.println("Radio is off");
         isOn = false;
     }
 
@@ -36,7 +36,7 @@ public class Television implements Device {
             return;
         }
         volume++;
-        System.out.println("Volume = " + volume);
+        System.out.println("Radio Volume = " + volume);
     }
 
     @Override
@@ -45,7 +45,7 @@ public class Television implements Device {
             return;
         }
         volume--;
-        System.out.println("Volume = " + volume);
+        System.out.println("Radio Volume = " + volume);
     }
 
     @Override
@@ -54,7 +54,7 @@ public class Television implements Device {
             return;
         }
         chanel++;
-        System.out.println("Chanel = " + chanel);
+        System.out.println("Station = " + chanel);
     }
 
     @Override
@@ -63,6 +63,7 @@ public class Television implements Device {
             return;
         }
         chanel--;
-        System.out.println("Chanel = " + chanel);
+        System.out.println("Station = " + chanel);
     }
 }
+

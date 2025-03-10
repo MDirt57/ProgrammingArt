@@ -1,14 +1,12 @@
 package task15_3_2.commands.document;
 
 import task15_3_2.Document;
+import task15_3_2.commands.interfaces.Command;
 
-public class PrintCommand extends DocumentCommand{
-    public PrintCommand(Document doc) {
-        super(doc);
-    }
+public class PrintCommand implements Command {
 
     @Override
-    public void execute() {
+    public void execute(Document document) {
         document.print();
     }
 }

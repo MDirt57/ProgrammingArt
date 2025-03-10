@@ -8,7 +8,7 @@ public class Button extends Clickable {
         super(command);
     }
 
-    public void click(){
-        command.execute();
+    public void click(Document document){
+        command.execute(document);
     }
 }

@@ -7,7 +7,7 @@ public class Shortcut extends Clickable{
         super(command);
     }
 
-    public void press() {
-        command.execute();
+    public void press(Document document) {
+        command.execute(document);
     }
 }
