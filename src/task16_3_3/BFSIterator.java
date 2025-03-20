@@ -9,7 +9,7 @@ public class BFSIterator implements Iterator<Item> {
     private int state;
 
     public BFSIterator(Box box){
-        queue = box.getChildren();  //isInstance();
+//        queue = box.getChildren();  //isInstance();
         state = 0;
     }
 
