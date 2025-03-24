@@ -18,7 +18,6 @@ public class FileReaderPublisher extends FileReader implements Publisher{
         for (Subscriber subscriber : subscribers) {
             subscriber.update(line);
         }
-
     }
 
     @Override
@@ -28,6 +27,6 @@ public class FileReaderPublisher extends FileReader implements Publisher{
 
     @Override
     public void removeSubscriber(Subscriber subscriber) {
-        subscribers.add(subscriber);
+        subscribers.remove(subscriber);
     }
 }
