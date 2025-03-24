@@ -26,22 +26,47 @@ public class Client {
                 1, // "halfA"
         };
 
+        System.out.println("============= Some Actions =============");
+
         for (int index = 0; index < edges.length; index++) {
             caretaker.changeSide(edges[index], values[index]);
             System.out.println("Volume = " + triangle.square());
         }
 
-        System.out.println("Undo");
+        System.out.println("============= Undo =============");
 
-        for (int i = 0; i < edges.length; i++){
+        for (int i = 0; i < 3; i++){
             caretaker.undo();
             System.out.println("Volume = " + triangle.square());
         }
 
-        System.out.println("Restore min square");
+        System.out.println("============= Redo =============");
 
-        caretaker.restoreMinSquare();
+        for (int i = 0; i < 2; i++){
+            caretaker.redo();
+            System.out.println("Volume = " + triangle.square());
+        }
+
+        System.out.println("============= Action =============");
+
+        caretaker.changeSide("halfA", 1);
         System.out.println("Volume = " + triangle.square());
+
+        System.out.println("============= Redo =============");
+        caretaker.redo();
+
+        System.out.println("============= End =============");
+
+
+//        for (int i = 0; i < edges.length; i++){
+//            caretaker.undo();
+//            System.out.println("Volume = " + triangle.square());
+//        }
+//
+//        System.out.println("Restore min square");
+//
+//        caretaker.restoreMinSquare();
+//        System.out.println("Volume = " + triangle.square());
 
 
 

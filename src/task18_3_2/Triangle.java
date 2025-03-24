@@ -7,11 +7,13 @@ public class Triangle {
         final private float a;
         final private float b;
         final private float c;
+        final private Command action;
 
-        private Memento(float a, float b, float c){
+        private Memento(float a, float b, float c, Command action){
             this.a = a;
             this.b = b;
             this.c = c;
+            this.action = action;
         }
 
     }
@@ -147,14 +149,18 @@ public class Triangle {
         return (float) Math.sqrt(s);
     }
 
-    public Memento save(){
-        return new Memento(a, b, c);
+    public Memento save(Command action){
+        return new Memento(a, b, c, action);
     }
 
     public void restore(Memento memento){
         this.a = memento.a;
         this.b = memento.b;
         this.c = memento.c;
+    }
+
+    public void redo(Memento memento){
+        memento.action.execute();
     }
 
 
