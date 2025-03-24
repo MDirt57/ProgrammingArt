@@ -57,7 +57,7 @@ public class Caretaker {
                 break;
         }
         history.push(memento);
-        redoHistory.empty();
+        redoHistory.clear();
         if (minSquare == null || triangle.square() < minSquare.getSecond()){
             minSquare = new Pair<>(memento, triangle.square());
         }

@@ -35,7 +35,7 @@ public class Client {
 
         System.out.println("============= Undo =============");
 
-        for (int i = 0; i < 3; i++){
+        for (int i = 0; i < 4; i++){
             caretaker.undo();
             System.out.println("Volume = " + triangle.square());
         }
@@ -54,6 +54,7 @@ public class Client {
 
         System.out.println("============= Redo =============");
         caretaker.redo();
+        System.out.println("Volume = " + triangle.square());
 
         System.out.println("============= End =============");
 
