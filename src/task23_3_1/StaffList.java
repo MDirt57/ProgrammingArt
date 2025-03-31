@@ -9,6 +9,10 @@ public class StaffList implements Employee {
     public StaffList() {
     }
 
+    public ArrayList<Employee> getEmployees(){
+        return salaries;
+    }
+
     public void addEmployee(Employee employee){
         salaries.add(employee);
     }
@@ -20,6 +24,11 @@ public class StaffList implements Employee {
             sum += salary.getSalary();
         }
         return sum;
+    }
+
+    @Override
+    public int accept(Visitor visitor) {
+        return visitor.visit(this);
     }
 
 }

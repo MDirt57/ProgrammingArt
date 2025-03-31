@@ -8,8 +8,10 @@ public class Client {
         staffList.addEmployee(new Manager(60000));
         staffList.addEmployee(new SalesPerson(50000));
         staffList.addEmployee(new SalesPerson(40000));
-
         System.out.println("Total amount paid to staff: " + staffList.getSalary());
+
+        Visitor bonus = new IncreaseSalaryVisitor(0f, 0.75f);
+        System.out.println("Total amount paid to staff: " + staffList.accept(bonus));
     }
 
 }
