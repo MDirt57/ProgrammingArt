@@ -2,8 +2,8 @@ package task20_3_1;
 
 public interface State {
 
-    void play(MediaPlayer player);
+    default void play(MediaPlayer player){}
 
-    void pause(MediaPlayer player);
+    default void pause(MediaPlayer player){}
 
 }

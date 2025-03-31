@@ -9,8 +9,4 @@ public class PauseState implements State{
         System.out.println("Video playing, icon set to " + player.getIcon());
     }
 
-    @Override
-    public void pause(MediaPlayer player){
-        return;
-    }
 }
